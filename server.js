@@ -35,6 +35,7 @@ app.get('/getBalance', async (req, res) => {
 })
 
 app.get('/mint', async (req, res) => {
+
     try {
         const sc = new ethers.Contract(contractAddress, abi, customHttpProvider)
         const interface = new ethers.utils.Interface(abi)
